@@ -4,7 +4,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,19 +11,23 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
+        //ChromeDriver.exe yolunu belirttim
         System.setProperty("webdriver.chrome.driver","C:\\Users\\Gurkan\\IdeaProjects\\CaseStudy\\src\\chromedriver.exe");
 
 
         WebDriver driver = new ChromeDriver();
 
+        //Burada ürünlerimiz bir list halinde, ürün eklemek istersek eğer , ile ekleyebiliriz
         List<String> productUrls = List.of(
                 "https://www.n11.com/urun/garnier-saftemiz-nemlendiren-temizleyici-250-ml-micellar-kusursuz-makyaj-temizleme-suyu-400-ml-40024434?magaza=loreal",
                 "https://www.hepsiburada.com/dreame-v10-pro-dikey-kablosuz-sarjli-supurge-genpa-garantili-p-HBV0000188N7U",
                 "https://www.trendyol.com/elseve/amla-bukle-belirginlestirici-sac-bakim-kremi-p-37573990",
                 "https://www.amazon.com.tr/Garn%C4%B1er-Temiz-Arada-Temizleme-peeling/dp/B07L7RFQD5/?_encoding=UTF8&pd_rd_w=iqbF1&content-id=amzn1.sym.58151f09-c1f1-4635-be5e-6c4f7f840492%3Aamzn1.symc.afd86303-4a72-4e34-8f6b-19828329e602&pf_rd_p=58151f09-c1f1-4635-be5e-6c4f7f840492&pf_rd_r=BQJ90JDJ3H9KSQKCA56N&pd_rd_wg=rX0F1&pd_rd_r=ac330ba2-945c-41a4-a9ca-c654fff0816f&ref_=pd_gw_ci_mcx_mr_hp_atf_m");
 
+        //Boş bir list tanımladım
         List<String[]> dataList = new ArrayList<>();
 
+        //Her bir ürün için scrarping yapacağız
         for (String url : productUrls) {
             //Thread.sleep(1000);
             scrapeData(driver, url,dataList);
@@ -35,6 +38,7 @@ public class Main {
         writeToJSON(dataList,"products.json");
 
     }
+    //Ürünleri scrap etmemiz için bir metod yazdım
     private static void scrapeData(WebDriver driver, String url,List<String[]> dataList) {
         try {
             driver.get(url);
@@ -47,6 +51,9 @@ public class Main {
             String urlImage = "";
             String rating = "";
             String reviewCount = "";
+
+            //Farklı e ticaret siteleri için farklı seçiciler mevcut. Bu yüzden hepsi farklı metodlarda yapmak yerine tek bir metod içerisinde yapıp değerlerini değiştirdim
+
 
             if (url.contains("trendyol.com")) {
                 productTitle = doc.select(".pr-new-br").text();
@@ -74,6 +81,8 @@ public class Main {
                 reviewCount = doc.select("#acrCustomerReviewText").first().text();
             }
 
+            // Aynı zamanda her ürünü tanımladığımız boş liste içerisine gönderdim
+
             dataList.add(new String[]{productTitle, productPrice, urlImage, rating, reviewCount});
 
 
@@ -87,6 +96,7 @@ public class Main {
             e.printStackTrace();
         }
     }
+    //CSV çıktısı alma metodu
     private static void writeToCSV(List<String[]> dataList, String filePath) {
         try (FileWriter writer = new FileWriter(filePath)) {
             for (String[] data : dataList) {
@@ -103,6 +113,7 @@ public class Main {
             System.err.println("CSV dosyasına yazma sırasında bir hata oluştu: " + e.getMessage());
         }
     }
+    //JSON çıktısı alma metodu
     private static void writeToJSON(List<String[]> dataList, String filePath) {
         JSONArray jsonArray = new JSONArray();
         for (String[] data : dataList) {
