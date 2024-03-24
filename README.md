@@ -60,7 +60,7 @@ Gerekli bağımlılıkları yükleyin:
 ```
 mvn install
 ```
-Main.java dosyasını çalıştırarak projeyi başlatın. Program otomatik olarak belirtilen ürün URL'lerinden veri çekecek, çıktıyı deneme.csv, deneme.xlsx ve deneme.json adlarında dosyalara kaydedecektir.
+Main.java dosyasını çalıştırarak projeyi başlatın. Program otomatik olarak belirtilen ürün URL'lerinden veri çekecek, çıktıyı deneme.csv ve deneme.json adlarında dosyalara kaydedecektir.
 
 ## License
 
