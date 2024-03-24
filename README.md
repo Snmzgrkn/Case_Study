@@ -69,7 +69,8 @@ Distributed under the MIT License. See [LICENSE](https://github.com/Snmzgrkn/Cas
 ## Authors
 
 * **Gürkan Sönmez** - *Comp Eng* - [Gürkan Sönmez](https://github.com/Snmzgrkn/)
-  ##Not
+
+##Not
 Bu projenin bir önceki versiyonu, daha uzun ve performans açısından daha az optimize edilmiş bir şekilde "Before" adı altında bu depoda bulunmaktadır. Güncellenmiş kod, daha az satır kod kullanır ve performans kaybını azaltır.
 
 
