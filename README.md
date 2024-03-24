@@ -38,10 +38,10 @@ Proje, aşağıdaki e-ticaret sitelerinden veri çekmek için tasarlanmıştır:
 ## Output Formatları
 * CSV
 * JSON
-* 
+  
 ## Proje Örnek Görüntüsü
-![CaseStudyMain java2024-03-2422-19-01-ezgif com-video-to-gif-converter](https://github.com/Snmzgrkn/CaseStudy/assets/56911478/5ae362c2-6c37-40de-9e3a-15cbf44f71b8)
-![GarnierSafTemizNemlendirenTemizleyici250MLMicellarKusursuzMakyajTemizlemeSuyu400MLFiyatlarvezellikleri-GoogleChrome2024-03-2422-45-31-ezgif com-video-to-gif-converter](https://github.com/Snmzgrkn/CaseStudy/assets/56911478/cfd7b0a4-4f38-413c-9ba3-56f79fb3cf5c)
+![1](https://github.com/Snmzgrkn/CaseStudy/assets/56911478/4718aff9-ff8e-46f9-a23d-c99c3e8f3c91)
+![2](https://github.com/Snmzgrkn/CaseStudy/assets/56911478/f91cc855-354c-4b00-85d9-d0f405b64a88)
 
 ## Kullanıcı Girişi
 Programı çalıştırmadan önce, kullanıcı istediği ürünleri Main.java dosyasındaki productUrls listesine eklemelidir.
