@@ -68,6 +68,7 @@ Distributed under the MIT License. See [LICENSE](https://github.com/Snmzgrkn/Cas
 
 ## Not
 Bu projenin bir önceki versiyonu, daha uzun ve performans açısından daha az optimize edilmiş bir şekilde "Before" adı altında bu depoda bulunmaktadır. Güncellenmiş kod, daha az satır kod kullanır ve performans kaybını azaltır.
+* Selenium kullanılmadan veri çekmeye yönelik olarak geliştirilmiştir. Ancak, Trendyol web sitesi için tam veri çekimini gerçekleştirebilmek için ChromeDriver kullanımına ihtiyaç duyulmuştur. Trendyol web sitesinin scriptleri yavaş yüklenmesi nedeniyle, veri çekiminin tamamlanabilmesi için sayfanın tamamen yüklenmesini beklemek gerekmektedir. Bu durum, Selenium'un dinamik içerikleri işleme yeteneği sayesinde başarıyla gerçekleştirilmiştir.
 
 ## Authors
 
