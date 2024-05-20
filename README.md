@@ -14,10 +14,8 @@
   </p>
 </p>
 
-![Contributors](https://img.shields.io/github/contributors/Snmzgrkn/CaseStudy?color=dark-green) 
 
-
-Bu proje, Mindsite şirketinin bana yönlendirdiği bir Interview Task projesidir. E-ticaret sitelerinden ürün verilerini çekmek ve işlemek için geliştirilmiştir. Java dilinde yazılmıştır ve Selenium, Jsoup, Apache POI ve JSON Simple kütüphanelerini kullanır.
+Bu proje,  bir Interview Task projesidir. E-ticaret sitelerinden ürün verilerini çekmek ve işlemek için geliştirilmiştir. Java dilinde yazılmıştır ve Selenium, Jsoup, Apache POI ve JSON Simple kütüphanelerini kullanır.
 
 ## Kullanılan Teknolojiler
 
