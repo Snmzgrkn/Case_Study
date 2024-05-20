@@ -1,7 +1,6 @@
 <br/>
 <p align="center">
   <a href="https://github.com/Snmzgrkn/CaseStudy">
-    <img src="images/mindsite.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Mindsite Interview Task - Case Study Projesi
